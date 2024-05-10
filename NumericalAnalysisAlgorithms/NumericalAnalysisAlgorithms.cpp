@@ -3,9 +3,15 @@
 
 #include <iostream>
 
+#include "NumberConversion.h"
+
+using namespace std;
+
 int main()
 {
-    std::cout << "Hello World!\n";
+    cout << "Hello World!\n";
+
+    numberConversion();
 }
 
 // Uruchomienie programu: Ctrl + F5 lub menu Debugowanie > Uruchom bez debugowania

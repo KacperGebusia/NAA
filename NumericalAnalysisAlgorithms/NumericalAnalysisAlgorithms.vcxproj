@@ -127,7 +127,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="NumberConversion.cpp" />
     <ClCompile Include="NumericalAnalysisAlgorithms.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="NumberConversion.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
