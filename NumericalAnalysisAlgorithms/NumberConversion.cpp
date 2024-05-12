@@ -22,26 +22,7 @@ void zamien(int liczba, int podstawa, string& liczba2)
             liczba2 += to_string(reszta);
         }
         else {
-            switch (reszta) {
-                case 10:
-                    liczba2 += 'A';
-                    break;
-                case 11:
-                    liczba2 += 'B';
-                    break;
-                case 12:
-                    liczba2 += 'C';
-                    break;
-                case 13:
-                    liczba2 += 'D';
-                    break;
-                case 14:
-                    liczba2 += 'E';
-                    break;
-                case 15:
-                    liczba2 += 'F';
-                    break;
-            }
+            liczba2 += static_cast<char>('A' + reszta - 10);
         }
         liczba = liczba / podstawa;
     }
