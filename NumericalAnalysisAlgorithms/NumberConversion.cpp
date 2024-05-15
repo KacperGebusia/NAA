@@ -5,36 +5,36 @@
 
 using namespace std;
 
-void wczytaj(int& liczba, int& podstawa)
+void input(int& number, int& base)
 {
     cout << "Podaj liczbe calkowita w systemie dziesietnym:";
-    cin >> liczba;
+    cin >> number;
     cout << "Podaj podstawe:";
-    cin >> podstawa;
+    cin >> base;
 }
 
-void zamien(int liczba, int podstawa, string& liczba2)
+void convert(int number, int base, string& number2)
 {
-    while (liczba > 0)
+    while (number > 0)
     {
-        int reszta = liczba % podstawa;
-        if (reszta <= 9) {
-            liczba2 += to_string(reszta);
+        int remainder = number % base;
+        if (remainder <= 9) {
+            number2 += to_string(remainder);
         }
         else {
-            liczba2 += static_cast<char>('A' + reszta - 10);
+            number2 += static_cast<char>('A' + remainder - 10);
         }
-        liczba = liczba / podstawa;
+        number = number / base;
     }
-    reverse(liczba2.begin(), liczba2.end());
+    reverse(number2.begin(), number2.end());
 }
 
 void numberConversion()
 {
-    int liczba = 0;
-    int podstawa = 0;
-    string liczba2 = "";
-    wczytaj(liczba, podstawa);
-    zamien(liczba, podstawa, liczba2);
-    cout << "Liczba " << liczba << " zapisana w systemie pozycyjnym o podstawie " << podstawa << " to " << liczba2;
+    int number = 0;
+    int base = 0;
+    string number2 = "";
+    input(number, base);
+    convert(number, base, number2);
+    cout << "Liczba " << number << " zapisana w systemie pozycyjnym o podstawie " << base << " to " << number2;
 }
